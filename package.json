@@ -1,0 +1,24 @@
+{
+  "name": "just-tech-news",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rachelf0/just-tech-news.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rachelf0/just-tech-news/issues"
+  },
+  "homepage": "https://github.com/rachelf0/just-tech-news#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mysql2": "^2.1.0"
+  }
+}
