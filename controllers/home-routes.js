@@ -1,10 +1,10 @@
 const router = require('express').Router();
-
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models'); // importing modules and models
 
 
 router.get('/', (req, res) => {
+    console.log(req.session);
     Post.findAll({
         attributes: [
             'id',
@@ -39,7 +39,17 @@ router.get('/', (req, res) => {
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
-        }); // using render instead of send or sendfile
-}); // .handlebars extension is implied
+        });
+});
+
+// check for a session running and redirect to homepage if one is
+router.get('/login', (req, res) => {
+    // if (req.session.loggedIn) {
+    //   res.redirect('/');
+    //   return;
+    // }
+  
+    res.render('login');
+});
 
 module.exports = router;
