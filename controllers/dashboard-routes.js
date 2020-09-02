@@ -42,7 +42,8 @@ router.get('/', withAuth, (req, res) => {
       });
   });
 
-  router.get('/edit/:id', withAuth, (req, res) => {
+// Route to GET edits
+router.get('/edit/:id', withAuth, (req, res) => {
     Post.findOne({
       where: {
         id: req.params.id
@@ -88,5 +89,7 @@ router.get('/', withAuth, (req, res) => {
         res.status(500).json(err);
       });
 });
+
+// Route to GET 
 
 module.exports = router;
